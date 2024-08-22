@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pucat Meme Maker</title>
+    <title>Pucat Make a Meme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Pucat Meme Maker</h1>
-        </header>
+        <h1>Pucat Make a Meme</h1>
 
-        <main>
+        <main role="main">
             <div class="meme-maker">
-                <input type="file" id="imageUpload" accept="image/*" />
-                <input type="text" id="topText" placeholder="Top Text" />
-                <input type="text" id="bottomText" placeholder="Bottom Text" />
-                <button id="generateMeme">Generate Meme</button>
-                <button id="downloadMeme">Download Meme</button>
                 <canvas id="memeCanvas"></canvas>
-
+                
+                <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                <button id="imageButton" class="btn">Add Image</button>
+                
+                <input type="text" id="topText" placeholder="Top Text">
+                <input type="text" id="bottomText" placeholder="Bottom Text">
+                
+                <button id="downloadMeme" class="btn">Download Meme</button>
+                
                 <div class="background-controls">
-                    <label for="background-image">Background Image:</label>
-                    <input type="file" id="background-image" accept="image/*" />
-                    <button id="addBackground">Add Background</button>
+                    <input type="file" id="background-image" accept="image/*" style="display: none;">
+                    <button id="addBackground" class="btn">Add Background</button>
+                    <button id="removeBackground" class="btn">Remove Background</button>
                 </div>
-            </div>
+                
         </main>
 
         <footer>
-            <p>© 2024 PUCAT. All rights reserved. UEAGH!</p>
+            © 2024 PUCAT. All rights reserved. UEAGH!
         </footer>
     </div>
 
     <script src="meme-maker.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
